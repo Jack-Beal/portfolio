@@ -1,0 +1,12 @@
+.square-img {
+    width: 100%; /* Half the screen width */
+    aspect-ratio: 1 / 1; /* Makes it square */
+    object-fit: cover; /* Ensures the image fits nicely */
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100%; /* Ensure the container has a height */
+}
