@@ -1,12 +1,27 @@
-.square-img {
-    width: 100%; /* Half the screen width */
-    aspect-ratio: 1 / 1; /* Makes it square */
-    object-fit: cover; /* Ensures the image fits nicely */
+body {
+    padding-top: 70px; /* Account for fixed navbar */
 }
 
-.container {
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    height: 100%; /* Ensure the container has a height */
+.card {
+    transition: transform 0.2s;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.hero-card .card-img-top {
+    height: 400px;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.1rem;
 }
