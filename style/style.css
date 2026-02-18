@@ -160,3 +160,61 @@ a .card-text {
     color: #ff1493;
     font-weight: bold;
   }
+
+/* =====================
+    RASPBERRY PI PAGE
+   ===================== */
+
+
+  .pi-hero {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    padding-top: 100px;
+    padding-bottom: 40px;
+    text-align: center;
+    color: white;
+  }
+  .pi-img {
+    max-width: 500px;
+    border-radius: 2rem;
+    box-shadow: 0 6px 36px 2px rgba(255, 107, 53, 0.2);
+    margin-bottom: 2rem;
+  }
+  .pi-highlight {
+    color: #ff6b35;
+    font-weight: bold;
+  }
+  .pi-btn {
+    background-color: #ff6b35;
+    border: none;
+    color: white;
+    font-weight: bold;
+  }
+  .pi-btn:hover {
+    background-color: #e55a2b;
+  }
+  .feature-box {
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, rgba(247, 147, 30, 0.1) 100%);
+    border-left: 4px solid #ff6b35;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+  }
+  .feature-box h4 {
+    color: #ff6b35;
+    font-weight: bold;
+  }
+  .project-card {
+    border: 2px solid #ff6b35;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+  }
+  .project-card:hover {
+    box-shadow: 0 8px 24px rgba(255, 107, 53, 0.15);
+    transform: translateY(-5px);
+  }
+  .project-card h3 {
+    color: #ff6b35;
+    margin-bottom: 1rem;
+  }
