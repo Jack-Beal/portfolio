@@ -123,30 +123,52 @@ html, body {
     --pi-light: rgba(255, 107, 53, 0.05);
   }
   
-  /* OVERFLOW FIX - Prevent horizontal scrolling */
-  header, .container-fluid, .valentines-hero, .pi-hero, .projects-hero, .studies-hero, .spotify-hero, .about-hero {
-    width: 100%;
+  /* MOBILE FIX - Prevent overflow */
+  .container {
+    width: 100% !important;
+    max-width: 100%;
+    padding: 0 15px;
     overflow: hidden;
   }
   
-  header img { width: 100%; height: auto; display: block; }
+  @media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+  }
   
-  .container-fluid {
-    padding-left: 0;
-    padding-right: 0;
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+    }
   }
   
   /* HERO SECTIONS */
   .valentines-hero, .pi-hero, .projects-hero, .studies-hero, .spotify-hero, .about-hero {
     padding: 100px 0 40px;
     text-align: center;
+    width: 100%;
+    overflow: hidden;
   }
   
   .valentines-img, .pi-img, .projects-img, .studies-img, .spotify-img, .about-img {
-    max-width: 500px;
+    max-width: 100%;
     width: 100%;
     border-radius: 2rem;
     margin-bottom: 2rem;
+    height: auto;
   }
   
   /* VALENTINES */
@@ -285,28 +307,6 @@ html, body {
   
   .about-highlight { color: #f093fb; font-weight: bold; }
   
-  /* ACCESSIBILITY */
-  .skip-to-content {
-    position: absolute;
-    left: -9999px;
-    z-index: 999;
-    padding: 1em;
-    background-color: #000;
-    color: white;
-    text-decoration: none;
-  }
-  
-  .skip-to-content:focus {
-    left: 50%;
-    transform: translateX(-50%);
-    top: 0;
-  }
-  
-  a:focus, button:focus, input:focus, select:focus, textarea:focus {
-    outline: 3px solid #667eea;
-    outline-offset: 2px;
-  }
-  
   .feature-box {
     padding: 1.5rem;
     margin-bottom: 1.5rem;
@@ -318,7 +318,7 @@ html, body {
   /* MOBILE RESPONSIVE */
   @media (max-width: 768px) {
     .valentines-hero, .pi-hero, .projects-hero, .studies-hero, .spotify-hero, .about-hero {
-      padding: 60px 20px 30px;
+      padding: 60px 15px 30px;
     }
   
     .card-img-top { height: 150px; }
@@ -327,8 +327,12 @@ html, body {
   }
   
   @media (max-width: 576px) {
+    .container {
+      padding: 0 10px;
+    }
+  
     .valentines-hero, .pi-hero, .projects-hero, .studies-hero, .spotify-hero, .about-hero {
-      padding: 40px 15px 20px;
+      padding: 40px 10px 20px;
     }
   
     .card-title { font-size: 1rem; }
