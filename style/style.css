@@ -123,12 +123,13 @@ html, body {
     --pi-light: rgba(255, 107, 53, 0.05);
   }
   
-  /* MOBILE FIX - Prevent overflow */
+  /* CONTAINER - Centered on desktop, fluid on mobile */
   .container {
-    width: 100% !important;
-    max-width: 100%;
+    width: 100%;
     padding: 0 15px;
     overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   @media (min-width: 576px) {
@@ -164,11 +165,12 @@ html, body {
   }
   
   .valentines-img, .pi-img, .projects-img, .studies-img, .spotify-img, .about-img {
-    max-width: 100%;
-    width: 100%;
+    max-width: 350px;
+    width: 90%;
     border-radius: 2rem;
-    margin-bottom: 2rem;
+    margin: 0 auto 2rem;
     height: auto;
+    display: block;
   }
   
   /* VALENTINES */
@@ -321,6 +323,11 @@ html, body {
       padding: 60px 15px 30px;
     }
   
+    .valentines-img, .pi-img, .projects-img, .studies-img, .spotify-img, .about-img {
+      max-width: 280px;
+      width: 85%;
+    }
+  
     .card-img-top { height: 150px; }
     .col-lg-8 .card-img-top { height: 200px; }
     .project-card { padding: 1.5rem; }
@@ -333,6 +340,11 @@ html, body {
   
     .valentines-hero, .pi-hero, .projects-hero, .studies-hero, .spotify-hero, .about-hero {
       padding: 40px 10px 20px;
+    }
+  
+    .valentines-img, .pi-img, .projects-img, .studies-img, .spotify-img, .about-img {
+      max-width: 250px;
+      width: 80%;
     }
   
     .card-title { font-size: 1rem; }
