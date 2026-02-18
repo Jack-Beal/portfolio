@@ -4,15 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' cdn.jsdelivr.net; style-src 'self' cdn.jsdelivr.net 'unsafe-inline'; img-src 'self' https: data:; font-src 'self' cdn.jsdelivr.net">
-    <title>Spotify Wrapped</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' cdn.jsdelivr.net; style-src 'self' cdn.jsdelivr.net fonts.googleapis.com 'unsafe-inline'; img-src 'self' https: data:; font-src 'self' cdn.jsdelivr.net fonts.gstatic.com">
+    <title>Spotify Wrapped - Jack Beal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link rel="stylesheet" href="./style/style.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-top border-bottom">
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-top border-bottom" aria-label="Main navigation">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">Jack Beal</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
@@ -29,19 +33,24 @@
         </div>
       </nav>
 
-    <!-- Header -->
-    <header>
-        <div class="container my-1">
-            <h1>Spotify Wrapped</h1>
+    <!-- Hero Section -->
+    <section class="spotify-hero">
+        <div class="container">
+            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&h=400&fit=crop" 
+                alt="Music and audio setup" class="spotify-img shadow" loading="lazy">
+            <h1 class="display-4 mb-3" style="color: white;">Spotify Wrapped</h1>
+            <p class="lead" style="color: rgba(255,255,255,0.9);">
+                My year in music - artists, albums, and listening habits
+            </p>
         </div>
-    </header>
+    </section>
 
     <!-- Main Content -->
-    <div class="container my-5">
+    <main id="main-content" class="container my-5">
         <div class="row">
             <div class="col-lg-8 mx-auto">
                 <article>
-                    <h2 class="mb-4">My Music This Year</h2>
+                    <h2 class="mb-4 spotify-highlight">My Music This Year</h2>
 
                     <p class="lead">
                         Over the past year my listening habits have been pretty consistent, but also oddly varied.
@@ -57,7 +66,7 @@
                         in the background of everything else.
                     </p>
 
-                    <h3 class="mt-5 mb-3">Comfort Albums & Background Music</h3>
+                    <h3 class="mt-5 mb-3 spotify-highlight">Comfort Albums & Background Music</h3>
 
                     <p>
                         One of the more interesting constants was <strong>Minecraft – Volume Alpha</strong>.
@@ -71,7 +80,7 @@
                         to favour music that creates a space rather than demands attention.
                     </p>
 
-                    <h3 class="mt-5 mb-3">Artists I Kept Returning To</h3>
+                    <h3 class="mt-5 mb-3 spotify-highlight">Artists I Kept Returning To</h3>
 
                     <p>
                         Loyle Carner dominated a lot of my actual song plays. Tracks like
@@ -94,7 +103,7 @@
                         emotional weight and something you can still casually throw on.
                     </p>
 
-                    <h3 class="mt-5 mb-3">Genres & Patterns</h3>
+                    <h3 class="mt-5 mb-3 spotify-highlight">Genres & Patterns</h3>
 
                     <p>
                         Genre-wise, the mix makes sense when I look at it: indie rock at the top,
@@ -202,7 +211,7 @@
 
             </div>
         </div>
-    </div>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
