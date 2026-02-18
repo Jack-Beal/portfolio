@@ -1,0 +1,37 @@
+body {
+    padding-top: 70px;
+}
+
+.card {
+    transition: transform 0.2s;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.hero-card .card-img-top {
+    height: 400px;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Make clickable cards look good */
+a .card-title,
+a .card-text {
+    color: inherit;
+}
+
+a:hover .card {
+    cursor: pointer;
+}
