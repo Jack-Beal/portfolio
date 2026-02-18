@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' cdn.jsdelivr.net; style-src 'self' cdn.jsdelivr.net 'unsafe-inline'; img-src 'self' https: data:; font-src 'self' cdn.jsdelivr.net">
-    <title>Projects</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' cdn.jsdelivr.net; style-src 'self' cdn.jsdelivr.net fonts.googleapis.com 'unsafe-inline'; img-src 'self' https: data:; font-src 'self' cdn.jsdelivr.net fonts.gstatic.com">
+    <title>Projects - Jack Beal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
     crossorigin="anonymous">
@@ -13,7 +16,8 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-top border-bottom">
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-top border-bottom" aria-label="Main navigation">
         <div class="container-fluid">
           <a class="navbar-brand " href="index.html">Jack Beal</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
@@ -31,22 +35,27 @@
         </div>
       </nav>
 
-    <!-- Header -->
-    <header>
-        <div class="container my-1">
-            <h1>Projects</h1>
+    <!-- Hero Section -->
+    <section class="projects-hero">
+        <div class="container">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop" 
+                alt="Coding project workspace" class="projects-img shadow" loading="lazy">
+            <h1 class="display-4 mb-3" style="color: white;">My Projects</h1>
+            <p class="lead" style="color: rgba(255,255,255,0.9);">
+                From IoT systems to game development - explore my creative work
+            </p>
         </div>
-    </header>
+    </section>
 
     <!-- Main Content -->
-    <div class="container my-5">
+    <main id="main-content" class="container my-5">
         <div class="row">
             <div class="col-lg-8 mx-auto">
                 <article>
-                    <h2 class="mb-4">Introduction</h2>
+                    <h2 class="mb-4 projects-highlight">Introduction</h2>
                     <p class="lead">This is a page about all my projects from university coursework to projects i worked on at home.</p>
                     
-                    <h3 class="mt-5 mb-3">Valentines Project</h3>
+                    <h3 class="mt-5 mb-3 projects-highlight">Valentines Project</h3>
                     <p>This is a creative IoT-based Valentine's Day project that brings romantic LED light displays to life through wireless communication. Jack's system uses a Raspberry Pi Pico microcontroller with 12 addressable NeoPixel LEDs to create an interactive, networked light show that can be triggered locally via a button press or remotely through MQTT messaging.</p>
 
                     <p>The project centers around a theme of connection and mutual moments—when Jack presses a physical button on his device, it triggers one of seven beautiful light patterns (including "heartbeat," "pulse," "sparkle," "rainbow," "love_wave," "rose_garden," and "romance_album"). Simultaneously, the system broadcasts this moment to a partner (Aimee) via MQTT over the internet using HiveMQ Cloud as the broker. The truly special feature is the "mutual moment" detection: if both Jack and Aimee press their buttons within 2 seconds of each other, both devices light up with a synchronized pattern, creating a magical shared experience despite physical distance. This project elegantly demonstrates how IoT technology can be used to bridge gaps, making it a particularly fitting use of embedded systems for expressing connection and affection during Valentine's Day.</p>
@@ -59,7 +68,7 @@
                         </a>
                     </div>
                     
-                    <h3 class="mt-5 mb-3">Project Nova</h3>
+                    <h3 class="mt-5 mb-3 projects-highlight">Project Nova</h3>
                     <p>This is an engaging turn-based strategy game where two players compete to locate and capture various sea creatures hidden on a 16x16 grid. Drawing inspiration from classic battleship-style games, players take turns guessing coordinates to find creatures before their opponent does. The game features four different creature types—Rays (V-shaped, 5 cells), Anemones (circular, 8 cells), Fish (linear, 3 cells), and Crabs (single cell)—each randomly placed and oriented on the hidden grid at the start of the game. Players earn 5 points for each successful hit and must reach 100 points to win, creating a competitive dynamic where both players are racing to discover all the creatures first.</p>
                     
                     <p>The game incorporates full save and load functionality, allowing players to pause their matches at any point and resume later without losing progress. A pause menu appears every four turns, giving players the option to save their game, continue playing, or exit gracefully. The interface provides clear feedback on each guess (hits, misses, and duplicate guesses), and at the end of the game, comprehensive statistics are displayed showing both players' final scores, health, number of guesses, and their complete grids. With its intuitive coordinate-based guessing system, creature variety, and strategic gameplay, this project demonstrates solid object-oriented design principles through the Player class and effective file I/O handling for game persistence.</p>
@@ -72,7 +81,7 @@
                         </a>
                     </div>
 
-                    <h3 class="mt-5 mb-3">Memory Game</h3>
+                    <h3 class="mt-5 mb-3 projects-highlight">Memory Game</h3>
                     <p>This is a digital adaptation of the classic Simon Says memory game, built on a Raspberry Pi Pico microcontroller with four colored LED buttons (red, blue, green, and yellow). The game challenges players to memorize and replicate an increasingly complex sequence of LED flashes and button presses. Each round, the game randomly adds a new color to the sequence and displays it by flashing the corresponding LEDs. Players must then press the buttons in the exact order shown; if they press the wrong button or press a button out of sequence, all four LEDs flash and the game immediately ends. The game features adjustable difficulty levels—players can select their preferred speed at startup (slow, normal, fast, or really fast) by pressing the corresponding colored button, which affects how quickly the LED sequence is displayed.</p>
                     
                     <p>The project seamlessly integrates IoT functionality through MQTT connectivity to HiveMQ Cloud, allowing the game state (win or lose) to be published and shared across a network in real-time. This networked feature enables the game results to be monitored remotely or used to trigger actions on other connected devices. The use of a custom Components class encapsulates each button-LED pair, making the code modular and scalable. With its intuitive button-based interface, progressive difficulty, and networked capabilities, this memory game demonstrates both embedded systems programming and cloud connectivity, making it an engaging way to test cognitive skills while showcasing IoT integration on microcontroller platforms.</p>
@@ -87,7 +96,7 @@
                 </article>
             </div>
         </div>
-    </div>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
