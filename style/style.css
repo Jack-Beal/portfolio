@@ -39,12 +39,12 @@ body {
   
   .hover-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   }
   
   .valentines-card:hover {
     border-color: #ff1493;
-    box-shadow: 0 0 20px rgba(255, 20, 147, 0.4), 0 8px 16px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 0 20px rgba(255, 20, 147, 0.4), 0 8px 16px rgba(0, 0, 0, 0.1);
     transform: scale(1.02);
   }
   
@@ -60,7 +60,7 @@ body {
   
   .spotify-card:hover {
     border-color: #1DB954;
-    box-shadow: 0 0 20px rgba(29, 185, 84, 0.4), 0 8px 16px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 0 20px rgba(29, 185, 84, 0.4), 0 8px 16px rgba(0, 0, 0, 0.1);
     transform: scale(1.02);
   }
   
@@ -70,7 +70,7 @@ body {
   
   .pi-card:hover {
     border-color: #ff6b35;
-    box-shadow: 0 0 20px rgba(255, 107, 53, 0.4), 0 8px 16px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.4), 0 8px 16px rgba(0, 0, 0, 0.1);
     transform: scale(1.02);
   }
   
