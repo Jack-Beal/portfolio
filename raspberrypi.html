@@ -1,261 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' cdn.jsdelivr.net; style-src 'self' cdn.jsdelivr.net fonts.googleapis.com 'unsafe-inline'; img-src 'self' https: data:; font-src 'self' cdn.jsdelivr.net fonts.gstatic.com">
-  <title>Raspberry Pi 5 Projects | Jack Beal</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./style/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' https: data:; font-src 'self' https: data:;">
+    <title>Raspberry Pi 5 Projects | Jack Beal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style/style.css">
 </head>
+
 <body>
-  <a href="#main-content" class="skip-to-content">Skip to main content</a>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-top border-bottom" aria-label="Main navigation">
-    <div class="container-fluid">
-      <a class="navbar-brand pi-highlight" href="index.html">Jack Beal</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="studies.html">Studies</a></li>
-        </ul>
-        <span class="navbar-text pi-highlight">🔴 Raspberry Pi 5</span>
-      </div>
-    </div>
-  </nav>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-top border-bottom"
+        aria-label="Main navigation">
+        <div class="container-fluid">
+            <a class="navbar-brand pi-highlight" href="index.html">Jack Beal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="studies.html">Studies</a></li>
+                </ul>
+                <span class="navbar-text pi-highlight">🔴 Raspberry Pi 5</span>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Hero Section -->
-  <section class="pi-hero">
-    <div class="container">
-      <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop" 
-        alt="Raspberry Pi 5" class="pi-img shadow" loading="lazy">
-      <h1 class="display-4 mb-3" style="color: white;">Raspberry Pi 5 Journey</h1>
-      <p class="lead" style="color: rgba(255,255,255,0.9);">
-        Building smart projects with two Raspberry Pi 5 devices - from bird detection to Minecraft servers.
-      </p>
-    </div>
-  </section>
-
-  <!-- Main Content -->
-  <main id="main-content" class="container my-5">
-    <div class="row justify-content-center">
-      <div class="col-lg-9">
-        <!-- Introduction -->
-        <section class="mb-5">
-          <h2 class="mb-4 pi-highlight">Getting Started</h2>
-          <p>
-            I was fortunate enough to receive two Raspberry Pi 5 devices for Christmas: an 8GB model and a 2GB model. These powerful single-board computers have opened up a world of possibilities for creative projects, from ecological monitoring to multiplayer gaming infrastructure. Over the following weeks, I've been exploring the capabilities of these devices and pushing them to their limits.
-          </p>
-        </section>
-
-        <!-- BirdNET-Pi Project -->
-        <section class="mb-5">
-          <div class="project-card">
-            <h3>🐦 BirdNET-Pi: Smart Bird Detection System</h3>
-            
-            <p>
-              One of my most rewarding projects has been setting up <strong>BirdNET-Pi</strong> on the 2GB Raspberry Pi 5. This is a sophisticated bird identification system that uses artificial intelligence to detect and classify bird species from audio recordings in real-time.
+    <!-- Hero Section -->
+    <section class="pi-hero">
+        <div class="container">
+            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop"
+                alt="Raspberry Pi 5" class="pi-img shadow" loading="lazy">
+            <h1 class="display-4 mb-3" style="color: white;">Raspberry Pi 5 Journey</h1>
+            <p class="lead" style="color: rgba(255,255,255,0.9);">
+                Building smart projects with two Raspberry Pi 5 devices - from bird detection to Minecraft servers.
             </p>
+        </div>
+    </section>
 
-            <h5 class="mt-4 pi-highlight">Hardware Setup</h5>
-            <p>
-              I purchased an affordable USB microphone from Amazon and installed it in my garden at home. The microphone continuously captures ambient audio, allowing the system to monitor bird activity 24/7. The setup is weather-resistant and designed to run indefinitely without manual intervention.
-            </p>
+    <!-- Main Content -->
+    <main id="main-content" class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <!-- Introduction -->
+                <section class="mb-5">
+                    <h2 class="mb-4 pi-highlight">Getting Started</h2>
+                    <p>
+                        I was fortunate enough to receive two Raspberry Pi 5 devices for Christmas: an 8GB model and a
+                        2GB model. These powerful single-board computers have opened up a world of possibilities for
+                        creative projects, from ecological monitoring to multiplayer gaming infrastructure. Over the
+                        following weeks, I've been exploring the capabilities of these devices and pushing them to their
+                        limits.
+                    </p>
+                </section>
 
-            <h5 class="mt-4 pi-highlight">How It Works</h5>
-            <div class="feature-box">
-              <h6>🎙️ Audio Capture</h6>
-              <p>
-                The USB microphone captures ambient sound from the garden throughout the day and night, feeding a constant stream of audio data to the Pi.
-              </p>
+                <!-- BirdNET-Pi Project -->
+                <section class="mb-5">
+                    <div class="project-card">
+                        <h3>🐦 BirdNET-Pi: Smart Bird Detection System</h3>
+
+                        <p>
+                            One of my most rewarding projects has been setting up <strong>BirdNET-Pi</strong> on the 2GB
+                            Raspberry Pi 5. This is a sophisticated bird identification system that uses artificial
+                            intelligence to detect and classify bird species from audio recordings in real-time.
+                        </p>
+
+                        <h5 class="mt-4 pi-highlight">Hardware Setup</h5>
+                        <p>
+                            I purchased an affordable USB microphone from Amazon and installed it in my garden at home.
+                            The microphone continuously captures ambient audio, allowing the system to monitor bird
+                            activity 24/7. The setup is weather-resistant and designed to run indefinitely without
+                            manual intervention.
+                        </p>
+
+                        <h5 class="mt-4 pi-highlight">How It Works</h5>
+                        <div class="feature-box">
+                            <h6>🎙️ Audio Capture</h6>
+                            <p>
+                                The USB microphone captures ambient sound from the garden throughout the day and night,
+                                feeding a constant stream of audio data to the Pi.
+                            </p>
+                        </div>
+
+                        <div class="feature-box">
+                            <h6>🤖 AI Analysis</h6>
+                            <p>
+                                BirdNET uses deep learning models to analyze the audio and identify bird species with
+                                high accuracy. The system processes audio chunks in real-time, classifying each detected
+                                bird call.
+                            </p>
+                        </div>
+
+                        <div class="feature-box">
+                            <h6>📊 Data Logging</h6>
+                            <p>
+                                All detections are logged with timestamps and confidence scores. This creates a
+                                comprehensive database of bird activity in my garden over time, allowing me to track
+                                migration patterns and seasonal variations.
+                            </p>
+                        </div>
+
+                        <div class="feature-box">
+                            <h6>🌐 Web Dashboard</h6>
+                            <p>
+                                BirdNET-Pi provides a web interface accessible from anywhere, showing real-time
+                                detections, historical data, species lists, and beautiful visualizations of bird
+                                activity.
+                            </p>
+                        </div>
+
+                        <h5 class="mt-4 pi-highlight">Key Benefits</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">✅ Continuous ecological monitoring without human intervention
+                            </li>
+                            <li class="list-group-item">✅ Identifies hundreds of bird species with machine learning
+                                accuracy</li>
+                            <li class="list-group-item">✅ Provides valuable data about local biodiversity</li>
+                            <li class="list-group-item">✅ Low-cost solution using affordable USB microphone</li>
+                            <li class="list-group-item">✅ Completely open-source and customizable</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Minecraft Server Project -->
+                <section class="mb-5">
+                    <div class="project-card">
+                        <h3>🎮 Minecraft Server: Multiplayer Gaming on Raspberry Pi</h3>
+
+                        <p>
+                            With the 8GB Raspberry Pi 5, I took on the challenge of creating a fully functional
+                            Minecraft server. While resource-constrained, I managed to get a working multiplayer server
+                            that friends could connect to and play together.
+                        </p>
+
+                        <h5 class="mt-4 pi-highlight">Port Forwarding with play.gg</h5>
+                        <p>
+                            One of the major hurdles was making the server accessible to players outside my local
+                            network. I solved this using <strong>play.gg</strong>, a tunneling service that handles port
+                            forwarding without exposing my home IP address. This was crucial for security and
+                            convenience.
+                        </p>
+
+                        <div class="feature-box">
+                            <h6>🔗 Port Forwarding Setup</h6>
+                            <p>
+                                play.gg automatically creates a public address for my Minecraft server, routing traffic
+                                through their secure tunnels. Players simply connect using the play.gg address without
+                                needing to know my actual IP. This is both safer and more reliable than traditional port
+                                forwarding.
+                            </p>
+                        </div>
+
+                        <h5 class="mt-4 pi-highlight">Voice Chat Modding</h5>
+                        <p>
+                            To enhance the multiplayer experience, I integrated voice chat modding into the server. This
+                            required:
+                        </p>
+
+                        <div class="feature-box">
+                            <h6>📦 Mod Installation</h6>
+                            <p>
+                                I researched and installed compatible voice chat mods (such as Simple Voice Chat) that
+                                work with the Minecraft server version. This involved managing dependencies and ensuring
+                                mod compatibility.
+                            </p>
+                        </div>
+
+                        <div class="feature-box">
+                            <h6>🔧 Configuration & Debugging</h6>
+                            <p>
+                                Voice chat mods require careful configuration to work with limited bandwidth and
+                                processing power on the Raspberry Pi. I spent considerable time debugging audio codec
+                                issues, latency problems, and packet loss to get clean voice communication.
+                            </p>
+                        </div>
+
+                        <div class="feature-box">
+                            <h6>⚙️ Performance Optimization</h6>
+                            <p>
+                                The 8GB Pi is resource-constrained for running a Minecraft server with mods and voice
+                                chat. I optimized the server by adjusting Java memory allocation, tweaking game
+                                settings, reducing render distances, and implementing aggressive chunk loading
+                                strategies to maximize performance.
+                            </p>
+                        </div>
+
+                        <h5 class="mt-4 pi-highlight">Optimization Techniques</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">💾 Tuned Java heap size (typically 512MB-768MB for 8GB Pi)</li>
+                            <li class="list-group-item">🔄 Optimized world generation and chunk rendering</li>
+                            <li class="list-group-item">📉 Reduced mob spawning and entity tick rates</li>
+                            <li class="list-group-item">🌐 Implemented compression for network traffic</li>
+                            <li class="list-group-item">⚡ Used lightweight server software (Fabric, Purpur)</li>
+                            <li class="list-group-item">🎯 Tuned view distance and simulation distance</li>
+                        </ul>
+
+                        <h5 class="mt-4 pi-highlight">Challenges & Solutions</h5>
+                        <p>
+                            Running Minecraft on a 8GB Raspberry Pi is genuinely challenging. The biggest obstacles
+                            included:
+                        </p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Memory Pressure:</strong> Solved through aggressive Java
+                                memory management and careful mod selection</li>
+                            <li class="list-group-item"><strong>CPU Bottlenecks:</strong> Addressed by disabling heavy
+                                features and optimizing server tick performance</li>
+                            <li class="list-group-item"><strong>Voice Chat Latency:</strong> Improved through network
+                                optimization and codec tuning</li>
+                            <li class="list-group-item"><strong>Mod Compatibility:</strong> Resolved by choosing
+                                lightweight mods specifically designed for limited hardware</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Skills Learned -->
+                <section class="mb-5">
+                    <h2 class="mb-4 pi-highlight">Skills & Knowledge Gained</h2>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <h5 class="pi-highlight">🐧 Linux & Systems Administration</h5>
+                            <ul class="list-unstyled">
+                                <li>✓ System configuration and optimization</li>
+                                <li>✓ Service management with systemd</li>
+                                <li>✓ Network configuration and troubleshooting</li>
+                                <li>✓ Resource monitoring and profiling</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="pi-highlight">🔌 Hardware Integration</h5>
+                            <ul class="list-unstyled">
+                                <li>✓ USB device configuration</li>
+                                <li>✓ Audio system setup</li>
+                                <li>✓ Power management</li>
+                                <li>✓ Device troubleshooting</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="pi-highlight">🌐 Network & Server Management</h5>
+                            <ul class="list-unstyled">
+                                <li>✓ Port forwarding and tunneling</li>
+                                <li>✓ Server administration</li>
+                                <li>✓ Network optimization</li>
+                                <li>✓ Security best practices</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="pi-highlight">🎮 Game Modding & Configuration</h5>
+                            <ul class="list-unstyled">
+                                <li>✓ Mod installation and compatibility</li>
+                                <li>✓ Server configuration files</li>
+                                <li>✓ Performance tuning</li>
+                                <li>✓ Debugging and troubleshooting</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Future Plans -->
+                <section class="mb-5">
+                    <h2 class="mb-4 pi-highlight">Future Plans</h2>
+                    <p>
+                        I'm excited to continue expanding these projects. Some future ideas include:
+                    </p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">🔬 Building a bird species dashboard with advanced analytics</li>
+                        <li class="list-group-item">📊 Creating a comparative analysis between BirdNET detections and
+                            manual observation</li>
+                        <li class="list-group-item">🎮 Optimizing the Minecraft server for more players with additional
+                            performance tweaks</li>
+                        <li class="list-group-item">🏠 Building additional IoT projects leveraging the Pi's GPIO
+                            capabilities</li>
+                        <li class="list-group-item">🤖 Experimenting with edge AI and machine learning on
+                            resource-constrained devices</li>
+                    </ul>
+                </section>
+
+                <!-- Conclusion -->
+                <section class="bg-light p-5 rounded-4 mb-5">
+                    <h3 class="pi-highlight mb-3">Summary</h3>
+                    <p>
+                        The Raspberry Pi 5 has proven to be an incredibly versatile platform for learning and
+                        experimentation. Whether it's ecological monitoring with machine learning or game server
+                        administration with network optimization, these projects have deepened my understanding of
+                        embedded systems, server administration, and creative problem-solving. The journey from unboxing
+                        to running live services has been rewarding and educational.
+                    </p>
+                </section>
             </div>
+        </div>
+    </main>
 
-            <div class="feature-box">
-              <h6>🤖 AI Analysis</h6>
-              <p>
-                BirdNET uses deep learning models to analyze the audio and identify bird species with high accuracy. The system processes audio chunks in real-time, classifying each detected bird call.
-              </p>
-            </div>
+    <!-- Footer -->
+    <footer class="bg-body-tertiary py-4 mt-5 border-top">
+        <div class="container text-center text-secondary">
+            <p class="mb-0">🔴 Back to <a href="index.html" class="pi-highlight text-decoration-none">Home</a> or view
+                all <a href="projects.html" class="pi-highlight text-decoration-none">Projects</a></p>
+        </div>
+    </footer>
 
-            <div class="feature-box">
-              <h6>📊 Data Logging</h6>
-              <p>
-                All detections are logged with timestamps and confidence scores. This creates a comprehensive database of bird activity in my garden over time, allowing me to track migration patterns and seasonal variations.
-              </p>
-            </div>
-
-            <div class="feature-box">
-              <h6>🌐 Web Dashboard</h6>
-              <p>
-                BirdNET-Pi provides a web interface accessible from anywhere, showing real-time detections, historical data, species lists, and beautiful visualizations of bird activity.
-              </p>
-            </div>
-
-            <h5 class="mt-4 pi-highlight">Key Benefits</h5>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">✅ Continuous ecological monitoring without human intervention</li>
-              <li class="list-group-item">✅ Identifies hundreds of bird species with machine learning accuracy</li>
-              <li class="list-group-item">✅ Provides valuable data about local biodiversity</li>
-              <li class="list-group-item">✅ Low-cost solution using affordable USB microphone</li>
-              <li class="list-group-item">✅ Completely open-source and customizable</li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- Minecraft Server Project -->
-        <section class="mb-5">
-          <div class="project-card">
-            <h3>🎮 Minecraft Server: Multiplayer Gaming on Raspberry Pi</h3>
-            
-            <p>
-              With the 8GB Raspberry Pi 5, I took on the challenge of creating a fully functional Minecraft server. While resource-constrained, I managed to get a working multiplayer server that friends could connect to and play together.
-            </p>
-
-            <h5 class="mt-4 pi-highlight">Port Forwarding with play.gg</h5>
-            <p>
-              One of the major hurdles was making the server accessible to players outside my local network. I solved this using <strong>play.gg</strong>, a tunneling service that handles port forwarding without exposing my home IP address. This was crucial for security and convenience.
-            </p>
-
-            <div class="feature-box">
-              <h6>🔗 Port Forwarding Setup</h6>
-              <p>
-                play.gg automatically creates a public address for my Minecraft server, routing traffic through their secure tunnels. Players simply connect using the play.gg address without needing to know my actual IP. This is both safer and more reliable than traditional port forwarding.
-              </p>
-            </div>
-
-            <h5 class="mt-4 pi-highlight">Voice Chat Modding</h5>
-            <p>
-              To enhance the multiplayer experience, I integrated voice chat modding into the server. This required:
-            </p>
-
-            <div class="feature-box">
-              <h6>📦 Mod Installation</h6>
-              <p>
-                I researched and installed compatible voice chat mods (such as Simple Voice Chat) that work with the Minecraft server version. This involved managing dependencies and ensuring mod compatibility.
-              </p>
-            </div>
-
-            <div class="feature-box">
-              <h6>🔧 Configuration & Debugging</h6>
-              <p>
-                Voice chat mods require careful configuration to work with limited bandwidth and processing power on the Raspberry Pi. I spent considerable time debugging audio codec issues, latency problems, and packet loss to get clean voice communication.
-              </p>
-            </div>
-
-            <div class="feature-box">
-              <h6>⚙️ Performance Optimization</h6>
-              <p>
-                The 8GB Pi is resource-constrained for running a Minecraft server with mods and voice chat. I optimized the server by adjusting Java memory allocation, tweaking game settings, reducing render distances, and implementing aggressive chunk loading strategies to maximize performance.
-              </p>
-            </div>
-
-            <h5 class="mt-4 pi-highlight">Optimization Techniques</h5>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">💾 Tuned Java heap size (typically 512MB-768MB for 8GB Pi)</li>
-              <li class="list-group-item">🔄 Optimized world generation and chunk rendering</li>
-              <li class="list-group-item">📉 Reduced mob spawning and entity tick rates</li>
-              <li class="list-group-item">🌐 Implemented compression for network traffic</li>
-              <li class="list-group-item">⚡ Used lightweight server software (Fabric, Purpur)</li>
-              <li class="list-group-item">🎯 Tuned view distance and simulation distance</li>
-            </ul>
-
-            <h5 class="mt-4 pi-highlight">Challenges & Solutions</h5>
-            <p>
-              Running Minecraft on a 8GB Raspberry Pi is genuinely challenging. The biggest obstacles included:
-            </p>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item"><strong>Memory Pressure:</strong> Solved through aggressive Java memory management and careful mod selection</li>
-              <li class="list-group-item"><strong>CPU Bottlenecks:</strong> Addressed by disabling heavy features and optimizing server tick performance</li>
-              <li class="list-group-item"><strong>Voice Chat Latency:</strong> Improved through network optimization and codec tuning</li>
-              <li class="list-group-item"><strong>Mod Compatibility:</strong> Resolved by choosing lightweight mods specifically designed for limited hardware</li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- Skills Learned -->
-        <section class="mb-5">
-          <h2 class="mb-4 pi-highlight">Skills & Knowledge Gained</h2>
-          <div class="row g-4">
-            <div class="col-md-6">
-              <h5 class="pi-highlight">🐧 Linux & Systems Administration</h5>
-              <ul class="list-unstyled">
-                <li>✓ System configuration and optimization</li>
-                <li>✓ Service management with systemd</li>
-                <li>✓ Network configuration and troubleshooting</li>
-                <li>✓ Resource monitoring and profiling</li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <h5 class="pi-highlight">🔌 Hardware Integration</h5>
-              <ul class="list-unstyled">
-                <li>✓ USB device configuration</li>
-                <li>✓ Audio system setup</li>
-                <li>✓ Power management</li>
-                <li>✓ Device troubleshooting</li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <h5 class="pi-highlight">🌐 Network & Server Management</h5>
-              <ul class="list-unstyled">
-                <li>✓ Port forwarding and tunneling</li>
-                <li>✓ Server administration</li>
-                <li>✓ Network optimization</li>
-                <li>✓ Security best practices</li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <h5 class="pi-highlight">🎮 Game Modding & Configuration</h5>
-              <ul class="list-unstyled">
-                <li>✓ Mod installation and compatibility</li>
-                <li>✓ Server configuration files</li>
-                <li>✓ Performance tuning</li>
-                <li>✓ Debugging and troubleshooting</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <!-- Future Plans -->
-        <section class="mb-5">
-          <h2 class="mb-4 pi-highlight">Future Plans</h2>
-          <p>
-            I'm excited to continue expanding these projects. Some future ideas include:
-          </p>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">🔬 Building a bird species dashboard with advanced analytics</li>
-            <li class="list-group-item">📊 Creating a comparative analysis between BirdNET detections and manual observation</li>
-            <li class="list-group-item">🎮 Optimizing the Minecraft server for more players with additional performance tweaks</li>
-            <li class="list-group-item">🏠 Building additional IoT projects leveraging the Pi's GPIO capabilities</li>
-            <li class="list-group-item">🤖 Experimenting with edge AI and machine learning on resource-constrained devices</li>
-          </ul>
-        </section>
-
-        <!-- Conclusion -->
-        <section class="bg-light p-5 rounded-4 mb-5">
-          <h3 class="pi-highlight mb-3">Summary</h3>
-          <p>
-            The Raspberry Pi 5 has proven to be an incredibly versatile platform for learning and experimentation. Whether it's ecological monitoring with machine learning or game server administration with network optimization, these projects have deepened my understanding of embedded systems, server administration, and creative problem-solving. The journey from unboxing to running live services has been rewarding and educational.
-          </p>
-        </section>
-      </div>
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-body-tertiary py-4 mt-5 border-top">
-    <div class="container text-center text-secondary">
-      <p class="mb-0">🔴 Back to <a href="index.html" class="pi-highlight text-decoration-none">Home</a> or view all <a href="projects.html" class="pi-highlight text-decoration-none">Projects</a></p>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
