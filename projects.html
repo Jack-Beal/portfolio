@@ -23,12 +23,6 @@
               <li class="nav-item">
                 <a class="nav-link" href="index.html">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"></a>
-              </li>
             </ul>
             <span class="navbar-text">
               (placeholder)
@@ -50,29 +44,45 @@
             <div class="col-lg-8 mx-auto">
                 <article>
                     <h2 class="mb-4">Introduction</h2>
-                    <p class="lead">This is your introductory paragraph. Use this space to give an overview of what this page is about and what readers can expect to learn or discover.</p>
+                    <p class="lead">This is a page about all my projects from university coursework to projects i worked on at home.</p>
                     
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    
-                    <h3 class="mt-5 mb-3">Section Heading</h3>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                    
-                    <!-- Optional Image in Content -->
-                    <div class="my-4">
-                        <img src="image/content-image.jpg" class="img-fluid rounded" alt="Content Image">
-                        <p class="text-muted small mt-2">Image caption goes here</p>
+                    <h3 class="mt-5 mb-3">Valentines Project</h3>
+                    <p>This is a creative IoT-based Valentine's Day project that brings romantic LED light displays to life through wireless communication. Jack's system uses a Raspberry Pi Pico microcontroller with 12 addressable NeoPixel LEDs to create an interactive, networked light show that can be triggered locally via a button press or remotely through MQTT messaging.</p>
+
+                    <p>The project centers around a theme of connection and mutual moments—when Jack presses a physical button on his device, it triggers one of seven beautiful light patterns (including "heartbeat," "pulse," "sparkle," "rainbow," "love_wave," "rose_garden," and "romance_album"). Simultaneously, the system broadcasts this moment to a partner (Aimee) via MQTT over the internet using HiveMQ Cloud as the broker. The truly special feature is the "mutual moment" detection: if both Jack and Aimee press their buttons within 2 seconds of each other, both devices light up with a synchronized pattern, creating a magical shared experience despite physical distance. This project elegantly demonstrates how IoT technology can be used to bridge gaps, making it a particularly fitting use of embedded systems for expressing connection and affection during Valentine's Day.</p>
+
+                    <div class="mt-4 p-4 bg-light rounded">
+                        <h4>Valentines Project Files</h4>
+                        <p>Download my code here. You will need a Raspberry Pi and other eqipment to run.</p>
+                        <a href="downloads/Valentines.zip" download class="btn btn-outline-primary">
+                            💾 Download Code
+                        </a>
                     </div>
                     
-                    <h3 class="mt-5 mb-3">Another Section</h3>
-                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    <h3 class="mt-5 mb-3">Project Nova</h3>
+                    <p>This is an engaging turn-based strategy game where two players compete to locate and capture various sea creatures hidden on a 16x16 grid. Drawing inspiration from classic battleship-style games, players take turns guessing coordinates to find creatures before their opponent does. The game features four different creature types—Rays (V-shaped, 5 cells), Anemones (circular, 8 cells), Fish (linear, 3 cells), and Crabs (single cell)—each randomly placed and oriented on the hidden grid at the start of the game. Players earn 5 points for each successful hit and must reach 100 points to win, creating a competitive dynamic where both players are racing to discover all the creatures first.</p>
                     
-                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                    <p>The game incorporates full save and load functionality, allowing players to pause their matches at any point and resume later without losing progress. A pause menu appears every four turns, giving players the option to save their game, continue playing, or exit gracefully. The interface provides clear feedback on each guess (hits, misses, and duplicate guesses), and at the end of the game, comprehensive statistics are displayed showing both players' final scores, health, number of guesses, and their complete grids. With its intuitive coordinate-based guessing system, creature variety, and strategic gameplay, this project demonstrates solid object-oriented design principles through the Player class and effective file I/O handling for game persistence.</p>
+
+                    <div class="mt-4 p-4 bg-light rounded">
+                        <h4>Project Nova Files</h4>
+                        <p>Download my code here.</p>
+                        <a href="downloads/Project_Nova.zip" download class="btn btn-outline-primary">
+                            💾 Download Code and jar file
+                        </a>
+                    </div>
+
+                    <h3 class="mt-5 mb-3">Memory Game</h3>
+                    <p>This is a digital adaptation of the classic Simon Says memory game, built on a Raspberry Pi Pico microcontroller with four colored LED buttons (red, blue, green, and yellow). The game challenges players to memorize and replicate an increasingly complex sequence of LED flashes and button presses. Each round, the game randomly adds a new color to the sequence and displays it by flashing the corresponding LEDs. Players must then press the buttons in the exact order shown; if they press the wrong button or press a button out of sequence, all four LEDs flash and the game immediately ends. The game features adjustable difficulty levels—players can select their preferred speed at startup (slow, normal, fast, or really fast) by pressing the corresponding colored button, which affects how quickly the LED sequence is displayed.</p>
                     
-                    <!-- Back to Home Link -->
-                    <div class="mt-5">
-                        <a href="index.html" class="btn btn-outline-primary">← Back to Home</a>
+                    <p>The project seamlessly integrates IoT functionality through MQTT connectivity to HiveMQ Cloud, allowing the game state (win or lose) to be published and shared across a network in real-time. This networked feature enables the game results to be monitored remotely or used to trigger actions on other connected devices. The use of a custom Components class encapsulates each button-LED pair, making the code modular and scalable. With its intuitive button-based interface, progressive difficulty, and networked capabilities, this memory game demonstrates both embedded systems programming and cloud connectivity, making it an engaging way to test cognitive skills while showcasing IoT integration on microcontroller platforms.</p>
+                    
+                    <div class="mt-4 p-4 bg-light rounded">
+                        <h4>Memory Game Code</h4>
+                        <p>Download my code here. You will need a Raspberry Pi and equipment to run.</p>
+                        <a href="downloads/Memory_Game.py.zip" download class="btn btn-outline-primary">
+                            💾 Download Code and Documentation
+                        </a>
                     </div>
                 </article>
             </div>
