@@ -1,15 +1,21 @@
-body {
+/* =====================
+   GLOBAL STYLES
+   ===================== */
+   body {
     padding-top: 70px;
 }
 
+/* =====================
+   CARD STYLES
+   ===================== */
 .card {
-    transition: transform 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s;
     height: 100%;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .card-img-top {
@@ -17,40 +23,96 @@ body {
     object-fit: cover;
 }
 
-.hero-card .card-img-top {
-    height: 400px;
-}
-
 .card-title {
     font-weight: bold;
     font-size: 1.1rem;
 }
 
-/* Make clickable cards look good */
+/* Featured/Hero card with larger image */
+.col-lg-8 .card-img-top {
+    height: 300px;
+}
+
+/* =====================
+   CARD HOVER EFFECTS
+   ===================== */
+.hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Valentines Project Card - Special Effect */
+.valentines-card {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.valentines-card:hover {
+    border-color: #ff1493;
+    box-shadow: 0 0 20px rgba(255, 20, 147, 0.4), 0 8px 16px rgba(0, 0, 0, 0.1) !important;
+    transform: scale(1.02);
+}
+
+.valentines-card:hover img {
+    filter: brightness(1.1) saturate(1.2);
+}
+
+.valentines-card:hover .card-title {
+    color: #ff1493;
+}
+
+.spotify-card {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.spotify-card:hover {
+    border-color: #1DB954;
+    box-shadow: 0 0 20px rgba(29, 185, 84, 0.4), 0 8px 16px rgba(0, 0, 0, 0.1) !important;
+    transform: scale(1.02);
+}
+
+.spotify-card:hover img {
+    filter: brightness(1.1) saturate(1.2);
+}
+
+.spotify-card:hover .card-title {
+    color: #1DB954;
+}
+
+/* =====================
+   LINK STYLES
+   ===================== */
+a.text-decoration-none:hover .card {
+    color: inherit;
+    cursor: pointer;
+}
+
 a .card-title,
 a .card-text {
     color: inherit;
 }
 
-a:hover .card {
-    cursor: pointer;
-}
-
-/* Carousel styles */
-.carousel-inner img {
-    width: 100%;
-    height: auto;
-    max-height: 600px;
-    object-fit: contain; /* Changed from cover to contain to show full images */
-}
-
+/* =====================
+   CAROUSEL STYLES
+   ===================== */
 .carousel {
-    background-color: #000; /* Dark background for letterboxing */
+    background-color: #000;
     border-radius: 8px;
     overflow: hidden;
 }
 
-/* Make carousel controls more visible */
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: contain;
+}
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     background-color: rgba(0, 0, 0, 0.5);
