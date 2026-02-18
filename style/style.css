@@ -1,7 +1,21 @@
 /* GLOBAL */
-body {
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  body {
     padding-top: 70px;
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  * { box-sizing: border-box; }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
   
   /* CARDS */
@@ -18,6 +32,7 @@ body {
   .card-img-top {
     height: 200px;
     object-fit: cover;
+    width: 100%;
   }
   
   .card-title {
@@ -30,10 +45,7 @@ body {
   }
   
   /* HOVER CARDS */
-  .hover-card,
-  .valentines-card,
-  .spotify-card,
-  .pi-card {
+  .hover-card, .valentines-card, .spotify-card, .pi-card {
     transition: all 0.3s ease;
     border: 2px solid transparent;
   }
@@ -49,15 +61,11 @@ body {
     transform: scale(1.02);
   }
   
-  .valentines-card:hover img,
-  .spotify-card:hover img,
-  .pi-card:hover img {
+  .valentines-card:hover img, .spotify-card:hover img, .pi-card:hover img {
     filter: brightness(1.1) saturate(1.2);
   }
   
-  .valentines-card:hover .card-title {
-    color: #ff1493;
-  }
+  .valentines-card:hover .card-title { color: #ff1493; }
   
   .spotify-card:hover {
     border-color: #1DB954;
@@ -65,9 +73,7 @@ body {
     transform: scale(1.02);
   }
   
-  .spotify-card:hover .card-title {
-    color: #1DB954;
-  }
+  .spotify-card:hover .card-title { color: #1DB954; }
   
   .pi-card:hover {
     border-color: #ff6b35;
@@ -75,9 +81,7 @@ body {
     transform: scale(1.02);
   }
   
-  .pi-card:hover .card-title {
-    color: #ff6b35;
-  }
+  .pi-card:hover .card-title { color: #ff6b35; }
   
   /* LINKS */
   a.text-decoration-none:hover .card {
@@ -85,8 +89,7 @@ body {
     cursor: pointer;
   }
   
-  a .card-title,
-  a .card-text {
+  a .card-title, a .card-text {
     color: inherit;
   }
   
@@ -95,6 +98,7 @@ body {
     background-color: #000;
     border-radius: 8px;
     overflow: hidden;
+    width: 100%;
   }
   
   .carousel-inner img {
@@ -104,8 +108,7 @@ body {
     object-fit: contain;
   }
   
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
+  .carousel-control-prev-icon, .carousel-control-next-icon {
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
     padding: 20px;
@@ -120,24 +123,42 @@ body {
     --pi-light: rgba(255, 107, 53, 0.05);
   }
   
-  /* VALENTINES THEME */
-  .valentines-hero {
-    background: linear-gradient(135deg, #ffe6ec 0%, #fff6fb 100%);
+  /* OVERFLOW FIX - Prevent horizontal scrolling */
+  header, .container-fluid, .valentines-hero, .pi-hero, .projects-hero, .studies-hero, .spotify-hero, .about-hero {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  header img { width: 100%; height: auto; display: block; }
+  
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  /* HERO SECTIONS */
+  .valentines-hero, .pi-hero, .projects-hero, .studies-hero, .spotify-hero, .about-hero {
     padding: 100px 0 40px;
     text-align: center;
   }
   
-  .valentines-img {
+  .valentines-img, .pi-img, .projects-img, .studies-img, .spotify-img, .about-img {
     max-width: 500px;
+    width: 100%;
     border-radius: 2rem;
-    box-shadow: 0 6px 36px 2px rgba(255, 20, 147, 0.1);
     margin-bottom: 2rem;
   }
   
-  .valentines-highlight {
-    color: var(--valentines-color);
-    font-weight: bold;
+  /* VALENTINES */
+  .valentines-hero {
+    background: linear-gradient(135deg, #ffe6ec 0%, #fff6fb 100%);
   }
+  
+  .valentines-img {
+    box-shadow: 0 6px 36px 2px rgba(255, 20, 147, 0.1);
+  }
+  
+  .valentines-highlight { color: var(--valentines-color); font-weight: bold; }
   
   .valentines-btn {
     background-color: var(--valentines-color);
@@ -146,49 +167,7 @@ body {
     font-weight: bold;
   }
   
-  .valentines-btn:hover {
-    background-color: #d01076;
-  }
-  
-  /* RASPBERRY PI THEME */
-  .pi-hero {
-    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
-    padding: 100px 0 40px;
-    text-align: center;
-    color: white;
-  }
-  
-  .pi-img {
-    max-width: 500px;
-    border-radius: 2rem;
-    box-shadow: 0 6px 36px 2px rgba(255, 107, 53, 0.2);
-    margin-bottom: 2rem;
-  }
-  
-  .pi-highlight {
-    color: var(--pi-color);
-    font-weight: bold;
-  }
-  
-  .pi-btn {
-    background-color: var(--pi-color);
-    border: none;
-    color: white;
-    font-weight: bold;
-  }
-  
-  .pi-btn:hover {
-    background-color: #e55a2b;
-  }
-  
-  /* FEATURE BOXES */
-  .valentines-hero .feature-box,
-  .pi-hero .feature-box {
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 0.5rem;
-    border-left: 4px solid;
-  }
+  .valentines-btn:hover { background-color: #d01076; }
   
   .valentines-hero .feature-box {
     background: linear-gradient(135deg, var(--valentines-light) 0%, rgba(255, 20, 147, 0.1) 100%);
@@ -199,6 +178,27 @@ body {
     color: var(--valentines-color);
     font-weight: bold;
   }
+  
+  /* RASPBERRY PI */
+  .pi-hero {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    color: white;
+  }
+  
+  .pi-img {
+    box-shadow: 0 6px 36px 2px rgba(255, 107, 53, 0.2);
+  }
+  
+  .pi-highlight { color: var(--pi-color); font-weight: bold; }
+  
+  .pi-btn {
+    background-color: var(--pi-color);
+    border: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .pi-btn:hover { background-color: #e55a2b; }
   
   .pi-hero .feature-box {
     background: linear-gradient(135deg, var(--pi-light) 0%, rgba(247, 147, 30, 0.1) 100%);
@@ -228,87 +228,63 @@ body {
     color: var(--pi-color);
     margin-bottom: 1rem;
   }
-
-  /* PROJECTS THEME */
+  
+  /* FEATURE BOXES */
+  .valentines-hero .feature-box, .pi-hero .feature-box {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    border-left: 4px solid;
+  }
+  
+  /* PROJECTS */
   .projects-hero {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: 100px 0 40px;
-    text-align: center;
     color: white;
   }
   
   .projects-img {
-    max-width: 500px;
-    border-radius: 2rem;
     box-shadow: 0 6px 36px 2px rgba(102, 126, 234, 0.2);
-    margin-bottom: 2rem;
   }
   
-  .projects-highlight {
-    color: #667eea;
-    font-weight: bold;
-  }
-
-  /* STUDIES THEME */
+  .projects-highlight { color: #667eea; font-weight: bold; }
+  
+  /* STUDIES */
   .studies-hero {
     background: linear-gradient(135deg, #3494e6 0%, #ec6ead 100%);
-    padding: 100px 0 40px;
-    text-align: center;
     color: white;
   }
   
   .studies-img {
-    max-width: 500px;
-    border-radius: 2rem;
     box-shadow: 0 6px 36px 2px rgba(52, 148, 230, 0.2);
-    margin-bottom: 2rem;
   }
   
-  .studies-highlight {
-    color: #3494e6;
-    font-weight: bold;
-  }
-
-  /* SPOTIFY THEME */
+  .studies-highlight { color: #3494e6; font-weight: bold; }
+  
+  /* SPOTIFY */
   .spotify-hero {
     background: linear-gradient(135deg, #1DB954 0%, #191414 100%);
-    padding: 100px 0 40px;
-    text-align: center;
     color: white;
   }
   
   .spotify-img {
-    max-width: 500px;
-    border-radius: 2rem;
     box-shadow: 0 6px 36px 2px rgba(29, 185, 84, 0.2);
-    margin-bottom: 2rem;
   }
   
-  .spotify-highlight {
-    color: #1DB954;
-    font-weight: bold;
-  }
-
-  /* ABOUT THEME */
+  .spotify-highlight { color: #1DB954; font-weight: bold; }
+  
+  /* ABOUT */
   .about-hero {
     background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    padding: 100px 0 40px;
-    text-align: center;
     color: white;
   }
   
   .about-img {
-    max-width: 500px;
-    border-radius: 2rem;
     box-shadow: 0 6px 36px 2px rgba(240, 147, 251, 0.2);
-    margin-bottom: 2rem;
   }
   
-  .about-highlight {
-    color: #f093fb;
-    font-weight: bold;
-  }
-
+  .about-highlight { color: #f093fb; font-weight: bold; }
+  
   /* ACCESSIBILITY */
   .skip-to-content {
     position: absolute;
@@ -325,21 +301,36 @@ body {
     transform: translateX(-50%);
     top: 0;
   }
-
-  /* Focus indicators */
-  a:focus,
-  button:focus,
-  input:focus,
-  select:focus,
-  textarea:focus {
+  
+  a:focus, button:focus, input:focus, select:focus, textarea:focus {
     outline: 3px solid #667eea;
     outline-offset: 2px;
   }
-
+  
   .feature-box {
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     border-radius: 0.5rem;
     border-left: 4px solid;
     background: rgba(102, 126, 234, 0.05);
+  }
+  
+  /* MOBILE RESPONSIVE */
+  @media (max-width: 768px) {
+    .valentines-hero, .pi-hero, .projects-hero, .studies-hero, .spotify-hero, .about-hero {
+      padding: 60px 20px 30px;
+    }
+  
+    .card-img-top { height: 150px; }
+    .col-lg-8 .card-img-top { height: 200px; }
+    .project-card { padding: 1.5rem; }
+  }
+  
+  @media (max-width: 576px) {
+    .valentines-hero, .pi-hero, .projects-hero, .studies-hero, .spotify-hero, .about-hero {
+      padding: 40px 15px 20px;
+    }
+  
+    .card-title { font-size: 1rem; }
+    .project-card { padding: 1rem; margin-bottom: 1rem; }
   }
