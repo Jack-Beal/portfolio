@@ -45,7 +45,7 @@ html, body {
   }
   
   /* HOVER CARDS */
-  .hover-card, .valentines-card, .spotify-card, .pi-card {
+  .hover-card, .valentines-card, .spotify-card, .pi-card, .maths-card {
     transition: all 0.3s ease;
     border: 2px solid transparent;
   }
@@ -61,7 +61,7 @@ html, body {
     transform: scale(1.02);
   }
   
-  .valentines-card:hover img, .spotify-card:hover img, .pi-card:hover img {
+  .valentines-card:hover img, .spotify-card:hover img, .pi-card:hover img, .maths-card:hover img {
     filter: brightness(1.1) saturate(1.2);
   }
   
@@ -82,6 +82,14 @@ html, body {
   }
   
   .pi-card:hover .card-title { color: #ff6b35; }
+  
+  .maths-card:hover {
+    border-color: var(--maths-color);
+    box-shadow: 0 0 20px rgba(21, 101, 192, 0.4), 0 8px 16px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+  }
+  
+  .maths-card:hover .card-title { color: var(--maths-color); }
   
   /* LINKS */
   a.text-decoration-none:hover .card {
@@ -121,6 +129,8 @@ html, body {
     --spotify-color: #1DB954;
     --pi-color: #ff6b35;
     --pi-light: rgba(255, 107, 53, 0.05);
+    --maths-color: #1565c0;
+    --maths-light: rgba(21, 101, 192, 0.05);
   }
   
   /* CONTAINER - Centered on desktop, fluid on mobile */
@@ -157,21 +167,21 @@ html, body {
   }
   
   /* HERO SECTIONS */
-  .valentines-hero, .pi-hero, .projects-hero, .studies-hero, .spotify-hero, .about-hero {
+  .valentines-hero, .pi-hero, .projects-hero, .studies-hero, .spotify-hero, .about-hero, .maths-hero {
     padding: 100px 0 40px;
     text-align: center;
     width: 100%;
     overflow: hidden;
   }
   
-  .valentines-hero .container, .pi-hero .container, .projects-hero .container, .studies-hero .container, .spotify-hero .container, .about-hero .container {
+  .valentines-hero .container, .pi-hero .container, .projects-hero .container, .studies-hero .container, .spotify-hero .container, .about-hero .container, .maths-hero .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
   
-  .valentines-img, .pi-img, .projects-img, .studies-img, .spotify-img, .about-img {
+  .valentines-img, .pi-img, .projects-img, .studies-img, .spotify-img, .about-img, .maths-img {
     max-width: 350px;
     width: 90%;
     border-radius: 2rem;
@@ -316,6 +326,37 @@ html, body {
   
   .about-highlight { color: #f093fb; font-weight: bold; }
   
+  /* MATHS REVISION */
+  .maths-hero {
+    background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+    color: white;
+  }
+  
+  .maths-img {
+    box-shadow: 0 6px 36px 2px rgba(21, 101, 192, 0.2);
+  }
+  
+  .maths-highlight { color: var(--maths-color); font-weight: bold; }
+  
+  .maths-btn {
+    background-color: var(--maths-color);
+    border: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .maths-btn:hover { background-color: #0d47a1; }
+  
+  .maths-hero .feature-box {
+    background: linear-gradient(135deg, var(--maths-light) 0%, rgba(21, 101, 192, 0.1) 100%);
+    border-left-color: var(--maths-color);
+  }
+  
+  .maths-hero .feature-box h4 {
+    color: var(--maths-color);
+    font-weight: bold;
+  }
+  
   .feature-box {
     padding: 1.5rem;
     margin-bottom: 1.5rem;
@@ -326,11 +367,11 @@ html, body {
   
   /* MOBILE RESPONSIVE */
   @media (max-width: 768px) {
-    .valentines-hero, .pi-hero, .projects-hero, .studies-hero, .spotify-hero, .about-hero {
+    .valentines-hero, .pi-hero, .projects-hero, .studies-hero, .spotify-hero, .about-hero, .maths-hero {
       padding: 60px 15px 30px;
     }
   
-    .valentines-img, .pi-img, .projects-img, .studies-img, .spotify-img, .about-img {
+    .valentines-img, .pi-img, .projects-img, .studies-img, .spotify-img, .about-img, .maths-img {
       max-width: 280px;
       width: 85%;
     }
@@ -345,11 +386,11 @@ html, body {
       padding: 0 10px;
     }
   
-    .valentines-hero, .pi-hero, .projects-hero, .studies-hero, .spotify-hero, .about-hero {
+    .valentines-hero, .pi-hero, .projects-hero, .studies-hero, .spotify-hero, .about-hero, .maths-hero {
       padding: 40px 10px 20px;
     }
   
-    .valentines-img, .pi-img, .projects-img, .studies-img, .spotify-img, .about-img {
+    .valentines-img, .pi-img, .projects-img, .studies-img, .spotify-img, .about-img, .maths-img {
       max-width: 250px;
       width: 80%;
     }
